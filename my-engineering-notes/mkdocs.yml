@@ -1,11 +1,14 @@
-site_name: Debashis's Engineering Notes
+site_name: Debashis Engineering Notes
 theme:
   name: material
+  palette: 
+    primary: blue
+    accent: light blue
   features:
     - navigation.tabs
-    - navigation.sections
-    - navigation.expand
+    - search.suggest
 
-# This automatically generates the menu from your folder structure!
-plugins:
-  - search
+nav:
+  - Home: index.md
+  - Java: java-notes.md
+  - AI & ML: ai-notes.md
