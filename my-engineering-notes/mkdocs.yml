@@ -1,0 +1,11 @@
+site_name: Debashis's Engineering Notes
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+
+# This automatically generates the menu from your folder structure!
+plugins:
+  - search
