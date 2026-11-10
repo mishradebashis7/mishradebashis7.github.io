@@ -6,8 +6,14 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Debashis Mishra - AI Engineer & Developer</title>
-  <meta content="Portfolio of Debashis Mishra, AI Engineer and Java Developer" name="description">
-  <meta content="AI, Java, Python, Software Engineer, Venice" name="keywords">
+  <meta content="Debashis Mishra: AI Engineer with 3+ years of production Java experience, Master's student in AI at Ca' Foscari Venice. Open to AI/ML internships in Italy & the EU." name="description">
+  <meta content="AI, Machine Learning, Java, Python, Data Engineering, Software Engineer, Venice" name="keywords">
+  <meta property="og:title" content="Debashis Mishra - AI Engineer & Developer">
+  <meta property="og:description" content="AI Engineer & Java Developer. Projects, experience and contact.">
+  <meta property="og:url" content="https://mishradebashis7.github.io/">
+  <meta property="og:image" content="https://mishradebashis7.github.io/assets/img/projects/helios.png">
+  <meta property="og:type" content="website">
+  <link href="assets/img/favicon.png" rel="icon">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
@@ -261,6 +267,20 @@
         transform: translateY(0);
     }
 
+    /* 5. Projects */
+    .project-card { display: flex; flex-direction: column; width: 100%; padding: 0; overflow: hidden; border-radius: 15px; }
+    .project-card .work-img { height: 210px; }
+    .project-card .work-img img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+    .work-box.project-card:hover img { transform: scale(1.08); }
+    .project-card .work-content { display: flex; flex-direction: column; flex: 1; padding: 1.5rem; }
+    .project-desc { color: #6c757d; font-size: 0.95rem; margin: 12px 0 16px; }
+    .project-links { margin-top: auto; display: flex; gap: 18px; }
+    .project-links a { color: #0078ff; font-weight: 500; text-decoration: none; }
+    .project-links a:hover { color: #0056b3; }
+    .timeline-content ul { color: #6c757d; padding-left: 18px; margin-bottom: 0; }
+    .timeline-content ul li { margin-bottom: 4px; }
+    .cert-box .s-description { font-size: 0.95rem; }
+
   </style>
 </head>
 
@@ -275,6 +295,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#work">Projects</a></li>
           <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
           <li><a class="nav-link scrollto" href="#education">Education</a></li>
           <li><a class="nav-link scrollto" href="#services">Skills</a></li>
@@ -300,9 +321,12 @@
         <div class="container">
           <h1 class="hero-title mb-4">I am Debashis Mishra</h1>
           <p class="hero-subtitle"><span class="typed" data-typed-items="AI Engineer, Java Developer, Data Scientist, Researcher"></span></p>
-          
+          <p class="hero-subtitle" style="font-size: 1.1rem; margin-top: 10px;">Open to AI/ML internships &middot; Venice, Italy</p>
+
           <div style="margin-top: 50px;">
               <a href="#about" class="btn btn-primary btn js-scroll px-4" role="button">Know More</a>
+
+              <a href="#work" class="btn btn-outline-light btn js-scroll px-4" role="button" style="margin-left: 10px;">Projects</a>
               
               <a href="https://mishradebashis7.github.io/engineering-notes/" class="btn btn-outline-light btn px-4" role="button" target="_blank" style="margin-left: 10px;">Eng. Blog</a>
               
@@ -378,7 +402,77 @@
           </div>
         </div>
       </div>
-    </section><section id="experience" class="sect-pt4 route">
+    </section>
+
+    <section id="work" class="portfolio-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">Projects</h3>
+              <p class="subtitle-a">Things I have built, with code and live demos</p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-md-4 d-flex">
+            <div class="work-box box-shadow-full project-card">
+              <a href="https://3dpve-project.streamlit.app/" target="_blank" rel="noopener" class="work-img">
+                <img src="assets/img/projects/3dpve.png" alt="3D-PVE patent valuation dashboard" class="img-fluid" loading="lazy">
+              </a>
+              <div class="work-content">
+                <h2 class="w-title">3D-PVE: Patent Valuation Engine</h2>
+                <div class="w-more"><span class="w-ctegory">EPO CodeFest 2026</span> / <span class="w-date">Python &middot; SQL &middot; ML &middot; Streamlit</span></div>
+                <p class="project-desc">Scores patents on legal, technical and market value using live EPO PATSTAT data, with an ML-adjusted score and an interactive 3D view of the whole portfolio.</p>
+                <div class="project-links">
+                  <a href="https://3dpve-project.streamlit.app/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Live demo</a>
+                  <a href="https://github.com/mishradebashis7/3DPVE-Project" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="work-box box-shadow-full project-card">
+              <a href="https://www.youtube.com/watch?v=6QTfsUfw02o" target="_blank" rel="noopener" class="work-img">
+                <img src="assets/img/projects/helios.png" alt="Helios Protocol command center dashboard" class="img-fluid" loading="lazy">
+              </a>
+              <div class="work-content">
+                <h2 class="w-title">Helios Protocol</h2>
+                <div class="w-more"><span class="w-ctegory">Qubic Hackathon 2025</span> / <span class="w-date">React &middot; FastAPI &middot; PyTorch</span></div>
+                <p class="project-desc">Uses surplus home solar power to train AI models: when the battery is full, a PyTorch node starts training instead of the energy going to waste.</p>
+                <div class="project-links">
+                  <a href="https://www.youtube.com/watch?v=6QTfsUfw02o" target="_blank" rel="noopener"><i class="bi bi-play-circle"></i> Video demo</a>
+                  <a href="https://github.com/mishradebashis7/Helios-Protocol-Qubic-Hackathon" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="work-box box-shadow-full project-card">
+              <a href="https://mishradebashis7.github.io/phyloprobe-temporal-analytics/" target="_blank" rel="noopener" class="work-img">
+                <img src="assets/img/projects/phyloprobe.png" alt="PhyloProbe temporal hierarchy dashboard" class="img-fluid" loading="lazy">
+              </a>
+              <div class="work-content">
+                <h2 class="w-title">PhyloProbe</h2>
+                <div class="w-more"><span class="w-ctegory">Information Visualization</span> / <span class="w-date">JavaScript &middot; SVG</span></div>
+                <p class="project-desc">Shows how each node in a hierarchy changes over time, with a time slider, sparklines and a 5&times;5 node matrix. Based on the Contact Trees and TreeVersity research papers.</p>
+                <div class="project-links">
+                  <a href="https://mishradebashis7.github.io/phyloprobe-temporal-analytics/" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Live demo</a>
+                  <a href="https://github.com/mishradebashis7/phyloprobe-temporal-analytics" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="sect-pt4 route">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -401,16 +495,30 @@
                                     <div class="timeline-content">
                                         <h5>Analyst (Software Engineering)</h5>
                                         <div class="timeline-date">May 2021 - Sept 2024 | DXC Technology</div>
-                                        <p>Implemented backend modules in Java/XML for US Insurance clients. Managed CI/CD pipelines using Jenkins and Git. Mentored junior engineers and documented systems for knowledge transfer.</p>
+                                        <ul>
+                                            <li>Built Java backend modules (XML, JSON, JSP) for a production insurance rules engine covering all <strong>50 U.S. states</strong>.</li>
+                                            <li>Delivered RESTful services and data workflows for client-facing systems.</li>
+                                            <li>Supported CI/CD and deployments with Jenkins, WinSCP and SQL Developer; took part in sprint planning, defect triage, release reviews and test automation.</li>
+                                            <li>Mentored junior engineers and wrote system documentation for knowledge transfer.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="timeline-item">
+                                    <div class="timeline-icon"><i class="bi bi-airplane-fill"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>Student Research Associate</h5>
+                                        <div class="timeline-date">May 2019 - Jul 2019 | VTOL Aviation, IIT Kanpur</div>
+                                        <p>Worked on autonomous UAV navigation using embedded control systems and C-based SDKs, including hardware interfacing; code versioned with Git.</p>
                                     </div>
                                 </li>
 
                                 <li class="timeline-item">
                                     <div class="timeline-icon"><i class="bi bi-laptop-fill"></i></div>
                                     <div class="timeline-content">
-                                        <h5>Research Associate & ML Intern</h5>
-                                        <div class="timeline-date">2019 | IIT Kanpur & IIT BHU</div>
-                                        <p>Worked on autonomous UAV navigation and Machine Learning pipelines for real-world applications. Built a Streamlit-powered web interface for applying supervised learning algorithms.</p>
+                                        <h5>Machine Learning Intern</h5>
+                                        <div class="timeline-date">May 2019 - Jul 2019 | EI Systems / TechNex, IIT BHU</div>
+                                        <p>Evaluated predictive models with data preprocessing and feature engineering; explored dimensionality reduction, pattern recognition and classifier evaluation for NLP and computer vision.</p>
                                     </div>
                                 </li>
 
@@ -445,7 +553,7 @@
                                     <div class="timeline-content">
                                         <h5>Master's in Computer Science & IT (AI)</h5>
                                         <div class="timeline-date">2024 - Present | Università Ca' Foscari, Italy</div>
-                                        <p>Specialization in Artificial Intelligence, Machine Learning, Deep Learning, and Cloud Computing.</p>
+                                        <p>Specialization in Artificial Intelligence &amp; Data Engineering: Machine Learning, Deep Learning, Information Retrieval, Cloud Computing, Distributed Programming, Geometric 3D Computer Vision and Time Series Analysis.</p>
                                     </div>
                                 </li>
 
@@ -454,7 +562,7 @@
                                     <div class="timeline-content">
                                         <h5>B.Tech in Computer Science</h5>
                                         <div class="timeline-date">Graduated 2021 | Siksha 'O' Anusandhan University</div>
-                                        <p>Foundation in Computer Science, Algorithms, Software Development, and Engineering principles.</p>
+                                        <p>Final-year project: a Streamlit web app that lets non-programmers apply supervised learning (NLP, binary classification) to real tasks such as disinformation filtering and mushroom edibility prediction.</p>
                                     </div>
                                 </li>
 
@@ -503,7 +611,7 @@
               <div class="service-content">
                 <h2 class="s-title">AI & Data Science</h2>
                 <p class="s-description text-center">
-                   Expertise in Python, TensorFlow, PyTorch, and Scikit-learn. Proficient in LLMs, Prompt Engineering, Computer Vision, and building data-driven pipelines.
+                   Python, PyTorch, TensorFlow and scikit-learn. LLMs, RAG, AI agents (LangChain/LangGraph), Hugging Face and computer vision, plus data pipelines with Spark, Kafka and Airflow.
                 </p>
               </div>
             </div>
@@ -516,8 +624,32 @@
               <div class="service-content">
                 <h2 class="s-title">DevOps & Cloud</h2>
                 <p class="s-description text-center">
-                  Experience with CI/CD workflows using Jenkins, Git/GitHub, and SQL Developer. Collaborative deployment processes and Agile/Scrum methodologies.
+                  CI/CD with Jenkins and Git/GitHub, Docker, Kubernetes, AWS and Oracle Cloud (OCI). Collaborative deployment processes and Agile/Scrum methodologies.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="service-box cert-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-patch-check"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">OCI 2025 Data Science Professional</h2>
+                <p class="s-description text-center">Oracle Certified &middot; Exam 1Z0-1110-25 &middot; Oct 2025</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="service-box cert-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-patch-check"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">OCI 2025 Generative AI Professional</h2>
+                <p class="s-description text-center">Oracle Certified &middot; Exam 1Z0-1127-25 &middot; Oct 2025</p>
               </div>
             </div>
           </div>
@@ -538,7 +670,7 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                      <form id="contact-form" role="form">
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
@@ -560,12 +692,7 @@
                               <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                             </div>
                           </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
+                          <div class="col-md-12 text-center mt-3">
                             <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
                         </div>
@@ -585,13 +712,13 @@
                       <ul class="list-ico">
                         <li><span class="bi bi-geo-alt"></span> Mestre, Venice, Italy</li>
                         <li><span class="bi bi-phone"></span> +39 3508307007</li>
-                        <li><span class="bi bi-envelope"></span> mishradebashis727@gmail.com</li>
+                        <li><span class="bi bi-envelope"></span> <a href="mailto:mishradebashis727@gmail.com">mishradebashis727@gmail.com</a></li>
                       </ul>
                     </div>
                     <div class="socials">
                       <ul>
-                        <li><a href="https://github.com/mishradebashis7"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/debashis-mishra-000316353/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                        <li><a href="https://github.com/mishradebashis7" target="_blank" rel="noopener" aria-label="GitHub"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/debashis-mishra-73543b109/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -642,7 +769,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <script src="assets/js/main.js"></script>
 
@@ -652,11 +778,22 @@
         "experience": "I have 3+ years of experience. I worked as an Analyst at DXC Technology (2021-2024) working on Java backend systems. I also interned at VTOL Aviation and El Systems/TechNex.",
         "education": "I am currently pursuing a Master's in Computer Science & IT (AI Specialization) at Ca' Foscari University, Venice. I hold a B.Tech in CSE from Siksha 'O' Anusandhan University.",
         "contact": "You can reach me at mishradebashis727@gmail.com or by phone at +39 3508307007. I am currently based in Mestre, Venice, Italy.",
-        "projects": "I have worked on insurance logic engines, autonomous UAV navigation, and built a Streamlit-powered web interface for ML algorithms.",
+        "projects": "My recent projects: 3D-PVE, a patent valuation engine on EPO PATSTAT data (EPO CodeFest 2026); Helios Protocol, which turns surplus solar energy into AI training compute (Qubic Hackathon); and PhyloProbe, a temporal hierarchy visualization. See the Projects section for demos and code.",
+        "certifications": "I hold two Oracle certifications from Oct 2025: OCI 2025 Data Science Professional and OCI 2025 Generative AI Professional.",
         "location": "I am currently living in Mestre, Venice, Italy.",
         "languages": "I speak Professional English, Native Hindi & Odia, and Beginner Italian.",
         "interests": "I am interested in Multimodal AI, Reasoning Agents, LLM-based Systems, Quantum Computation, and Robotics."
     };
+
+    // Contact form: opens the visitor's email app with the message filled in (free, no server needed)
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var f = e.target;
+        var body = f.message.value + '\n\n' + f.name.value + '\n' + f.email.value;
+        window.location.href = 'mailto:mishradebashis727@gmail.com'
+            + '?subject=' + encodeURIComponent(f.subject.value)
+            + '&body=' + encodeURIComponent(body);
+    });
 
     function toggleChat() {
         var chatBox = document.getElementById('chat-box');
@@ -706,8 +843,10 @@
             return knowledgeBase.education;
         } else if (input.includes("contact") || input.includes("email") || input.includes("phone") || input.includes("reach")) {
             return knowledgeBase.contact;
-        } else if (input.includes("project")) {
+        } else if (input.includes("project") || input.includes("hackathon") || input.includes("demo")) {
             return knowledgeBase.projects;
+        } else if (input.includes("cert") || input.includes("oracle") || input.includes("oci")) {
+            return knowledgeBase.certifications;
         } else if (input.includes("live") || input.includes("location") || input.includes("where")) {
             return knowledgeBase.location;
         } else if (input.includes("language")) {

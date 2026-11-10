@@ -1,8 +1,8 @@
 # 👨‍💻 Debashis Mishra - Portfolio & Engineering Notes
 
 ![Profile Views](https://komarev.com/ghpvc/?username=mishradebashis7&color=blue&style=flat-square)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/debashis-mishra-000316353/)
-[![Website](https://img.shields.io/badge/Website-Live_Demo-green?style=flat-square&logo=google-chrome)](https://mishradebashis7.github.io/mishradebashis7.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/debashis-mishra-73543b109/)
+[![Website](https://img.shields.io/badge/Website-Live_Demo-green?style=flat-square&logo=google-chrome)](https://mishradebashis7.github.io/)
 
 ## 🚀 About The Project
 This repository hosts my personal professional portfolio and my "Digital Garden" of engineering notes. 
