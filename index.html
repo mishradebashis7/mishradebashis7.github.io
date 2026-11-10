@@ -1,830 +1,726 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Debashis Mishra — AI Engineer</title>
-  <meta name="description" content="Debashis Mishra: AI engineer with 3+ years of production Java at DXC Technology, Master's student in AI & Data Engineering at Ca' Foscari Venice. Open to AI/ML internships in Italy & the EU.">
-  <meta name="theme-color" content="#0a0b0f">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Debashis Mishra — AI Engineer">
-  <meta property="og:description" content="Production Java engineer turned AI builder. Projects, experience and contact.">
-  <meta property="og:url" content="https://mishradebashis7.github.io/">
-  <meta property="og:image" content="https://mishradebashis7.github.io/assets/img/projects/helios.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://mishradebashis7.github.io/">
-  <link rel="icon" href="assets/img/favicon.png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Fonts: all SIL Open Font License -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>Debashis Mishra - AI Engineer & Developer</title>
+  <meta content="Portfolio of Debashis Mishra, AI Engineer and Java Developer" name="description">
+  <meta content="AI, Java, Python, Software Engineer, Venice" name="keywords">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Debashis Mishra",
-    "jobTitle": "AI Engineer",
-    "url": "https://mishradebashis7.github.io/",
-    "email": "mailto:mishradebashis727@gmail.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Venice", "addressCountry": "IT" },
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Università Ca' Foscari Venezia" },
-      { "@type": "CollegeOrUniversity", "name": "Siksha 'O' Anusandhan University" }
-    ],
-    "knowsAbout": ["Machine Learning", "Deep Learning", "LLMs", "RAG", "Data Engineering", "Java", "Python"],
-    "sameAs": [
-      "https://github.com/mishradebashis7",
-      "https://www.linkedin.com/in/debashis-mishra-73543b109/"
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <style>
-    html, body { background: #0a0b0f; }
-
-    :root {
-      --bg: #0a0b0f;
-      --surface: #111319;
-      --surface-2: #161922;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.16);
-      --text: #eceef2;
-      --muted: #9aa1ae;
-      --faint: #6b7280;
-      --accent: #7cf3c6;
-      --accent-ink: #062018;
-      --accent-soft: rgba(124, 243, 198, 0.12);
-      --serif: "Instrument Serif", Georgia, serif;
-      --sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
-      --wrap: min(1160px, 100% - 32px);
+    /* 1. Global Font Update */
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif !important;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0; color: var(--text); font-family: var(--sans);
-      font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+    /* 2. Service/Skill Card Hover Animation */
+    .service-box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
     }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; }
-    ::selection { background: var(--accent); color: var(--accent-ink); }
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-    .wrap { width: var(--wrap); margin-inline: auto; }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    .skip { position: absolute; left: 16px; top: -60px; background: var(--accent); color: var(--accent-ink); padding: 10px 14px; border-radius: 8px; z-index: 100; font-weight: 600; text-decoration: none; }
-    .skip:focus { top: 16px; }
-
-    /* background glow + grain */
-    .bg-glow { position: fixed; inset: 0; pointer-events: none; z-index: -1;
-      background:
-        radial-gradient(60% 50% at 85% -10%, rgba(124, 243, 198, 0.10), transparent 60%),
-        radial-gradient(50% 40% at -10% 30%, rgba(99, 140, 255, 0.07), transparent 60%);
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    .ico-circle {
+      transition: all 0.4s ease;
+    }
+    .service-box:hover .ico-circle {
+      background-color: #0078ff;
+      color: #fff;
+      box-shadow: 0 0 0 10px #cde1f8;
     }
 
-    /* ---------- nav ---------- */
-    .nav { position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 50;
-      width: var(--wrap); display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      padding: 8px 8px 8px 16px; border: 1px solid var(--line); border-radius: 999px;
-      background: rgba(13, 15, 20, 0.66); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%);
+    /* 3. Timeline Styles */
+    .timeline {
+      position: relative;
+      padding: 20px 0;
+      list-style: none;
     }
-    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
-    .brand img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; object-position: 50% 18%; border: 1px solid var(--line-strong); }
-    .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
-    .nav ul a { display: block; padding: 8px 12px; border-radius: 999px; text-decoration: none; color: var(--muted); font-size: 14px; transition: color .2s, background .2s; }
-    .nav ul a:hover, .nav ul a.active { color: var(--text); background: rgba(255,255,255,0.06); }
-
-    /* ---------- buttons ---------- */
-    .btn { --h: 44px; display: inline-flex; align-items: center; gap: 8px; height: var(--h); padding: 0 18px;
-      border-radius: 999px; font: 600 15px/1 var(--sans); text-decoration: none; cursor: pointer;
-      border: 1px solid var(--line-strong); background: rgba(255,255,255,0.03); color: var(--text);
-      transition: transform .25s var(--ease), background .2s, border-color .2s; white-space: nowrap; }
-    .btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.06); }
-    .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
-    .btn.primary:hover { background: #a2f8d8; }
-    .btn.sm { --h: 36px; padding: 0 14px; font-size: 14px; }
-    .btn svg { width: 16px; height: 16px; flex: none; }
-    [hidden] { display: none !important; }
-
-    /* ---------- hero ---------- */
-    .hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 128px 0 64px; position: relative; }
-    .status { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 10px; border: 1px solid var(--line-strong);
-      border-radius: 999px; font: 500 13px/1.2 var(--mono); color: var(--muted); background: rgba(255,255,255,0.02); }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(124,243,198,.6); animation: ping 2.4s infinite; flex: none; }
-    @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(124,243,198,.55); } 70%,100% { box-shadow: 0 0 0 10px rgba(124,243,198,0); } }
-
-    .hero h1 { font-family: var(--sans); font-weight: 600; letter-spacing: -0.035em; line-height: 1.02;
-      font-size: clamp(44px, 7.4vw, 104px); margin: 28px 0 0; max-width: 13ch; }
-    .hero h1 em, .serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
-    .hero h1 em { color: var(--accent); }
-    .w { display: inline-block; }
-    .js .hero h1 .w { opacity: 0; filter: blur(12px); transform: translateY(0.25em); animation: blurIn .9s var(--ease) forwards; }
-    @keyframes blurIn { to { opacity: 1; filter: blur(0); transform: none; } }
-
-    .role { margin-top: 28px; font: 500 15px/1.4 var(--mono); color: var(--muted); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .slot { display: inline-grid; height: 1.4em; overflow: hidden; vertical-align: bottom; color: var(--text); }
-    .slot span { grid-area: 1 / 1; transition: transform .6s var(--ease), opacity .6s; transform: translateY(100%); opacity: 0; }
-    .slot span.on { transform: none; opacity: 1; }
-    .slot span.off { transform: translateY(-100%); opacity: 0; }
-    .no-js-role { color: var(--text); }
-
-    .lede { margin: 20px 0 0; max-width: 60ch; color: var(--muted); font-size: clamp(17px, 1.6vw, 19px); }
-    .lede strong { color: var(--text); font-weight: 500; }
-    .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
-    .fade-up { opacity: 0; transform: translateY(14px); animation: fadeUp .9s var(--ease) forwards; }
-    @keyframes fadeUp { to { opacity: 1; transform: none; } }
-    html:not(.js) .fade-up { opacity: 1; transform: none; animation: none; }
-
-    .scroll-cue { position: absolute; bottom: 28px; left: 0; font: 500 12px var(--mono); color: var(--faint); letter-spacing: .12em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
-    .scroll-cue i { width: 1px; height: 36px; background: linear-gradient(var(--faint), transparent); display: block; animation: cue 2s var(--ease) infinite; transform-origin: top; }
-    @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
-
-    /* ---------- stats ---------- */
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .stat { padding: 28px 20px 28px 0; }
-    .stat + .stat { padding-left: 24px; border-left: 1px solid var(--line); }
-    .stat b { display: block; font: 600 clamp(36px, 4.4vw, 56px)/1 var(--sans); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
-    .stat span { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
-
-    /* ---------- sections ---------- */
-    section { padding: clamp(80px, 11vw, 140px) 0 0; }
-    .eyebrow { font: 500 12px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 10px; }
-    .eyebrow::before { content: ""; width: 18px; height: 1px; background: currentColor; }
-    h2 { font-weight: 600; font-size: clamp(34px, 4.8vw, 60px); letter-spacing: -0.03em; line-height: 1.05; margin: 16px 0 0; max-width: 18ch; }
-    .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 48px; }
-    .sec-head p { color: var(--muted); max-width: 44ch; margin: 0; }
-
-    .reveal { opacity: 1; }
-    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0s); }
-    .js .reveal.in { opacity: 1; transform: none; }
-
-    /* ---------- projects (sticky stack) ---------- */
-    .stack { display: grid; gap: 28px; padding-bottom: 8px; }
-    .project { position: sticky; top: calc(96px + var(--i) * 14px); transform-origin: 50% 0;
-      display: grid; grid-template-columns: 1.05fr 1fr; min-height: 520px;
-      border: 1px solid var(--line); border-radius: 28px; overflow: hidden;
-      background: linear-gradient(180deg, var(--surface-2), var(--surface)); box-shadow: 0 -20px 60px rgba(0,0,0,0.45);
-      will-change: transform; }
-    .p-body { padding: clamp(28px, 3.6vw, 48px); display: flex; flex-direction: column; gap: 18px; }
-    .p-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 500 12px var(--mono); color: var(--muted); letter-spacing: .04em; }
-    .badge { padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text); }
-    .badge.acc { background: var(--accent-soft); color: var(--accent); border-color: rgba(124,243,198,0.3); }
-    .project h3 { margin: 0; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 600; }
-    .project h3 .serif { color: var(--muted); font-size: .9em; }
-    .p-body > p { margin: 0; color: var(--muted); }
-    .p-body ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 15.5px; }
-    .p-body li { padding-left: 22px; position: relative; color: #cdd2da; }
-    .p-body li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 8px; height: 1px; background: var(--accent); }
-    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
-    .chip { font: 500 12.5px var(--mono); padding: 5px 10px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); color: #c3c8d1; }
-    .links { display: flex; flex-wrap: wrap; gap: 8px; }
-    .hint { font: 400 12px var(--mono); color: var(--faint); align-self: center; }
-
-    .p-media { position: relative; border-left: 1px solid var(--line); background: #07080b; overflow: hidden; min-height: 280px; }
-    .p-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 0 0; transition: transform 1.2s var(--ease); }
-    .project:hover .p-media img { transform: scale(1.03); }
-    .p-media::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(10,11,15,0.35), transparent 30%); }
-    .p-media canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-    .axis-legend { position: absolute; left: 20px; bottom: 18px; display: flex; flex-wrap: wrap; gap: 12px; font: 500 11.5px var(--mono); color: var(--muted); z-index: 1; }
-    .axis-legend span { display: inline-flex; align-items: center; gap: 6px; }
-    .axis-legend i { width: 8px; height: 8px; border-radius: 50%; display: block; }
-
-    /* earlier work */
-    .earlier { margin-top: 64px; border-top: 1px solid var(--line); }
-    .earlier h3 { font: 500 12px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 28px 0 8px; }
-    .row { display: grid; grid-template-columns: 140px 1fr auto; gap: 24px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
-    .row .yr { font: 500 13px var(--mono); color: var(--faint); }
-    .row strong { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
-    .row p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
-    .row .go { font: 500 13px var(--mono); color: var(--muted); transition: color .2s, transform .3s var(--ease); }
-    a.row:hover .go { color: var(--accent); transform: translateX(4px); }
-    a.row:hover strong { color: var(--accent); }
-
-    /* ---------- experience ---------- */
-    .xp { display: grid; grid-template-columns: 260px 1fr; gap: 24px 48px; padding: 36px 0; border-top: 1px solid var(--line); }
-    .xp:last-child { border-bottom: 1px solid var(--line); }
-    .xp .when { font: 500 13px var(--mono); color: var(--faint); }
-    .xp .org { margin-top: 8px; color: var(--muted); font-size: 15px; }
-    .xp h3 { margin: 0 0 14px; font-size: clamp(22px, 2.4vw, 28px); letter-spacing: -0.02em; font-weight: 600; }
-    .xp ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-    .xp li { padding-left: 22px; position: relative; color: #cdd2da; }
-    .xp li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 8px; height: 1px; background: var(--accent); }
-    .xp li b { color: var(--text); font-weight: 600; }
-
-    /* ---------- skills ---------- */
-    .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .card { border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--surface); transition: border-color .3s, transform .4s var(--ease); }
-    .card:hover { border-color: var(--line-strong); transform: translateY(-3px); }
-    .card h3 { margin: 0 0 6px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
-    .card > p { margin: 0 0 16px; color: var(--muted); font-size: 14.5px; }
-    .card .chips { margin-top: 0; padding-top: 0; }
-
-    .certs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
-    .cert { display: flex; gap: 18px; align-items: center; }
-    .cert .seal { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--accent-soft); border: 1px solid rgba(124,243,198,.3); color: var(--accent); flex: none; }
-    .cert .seal svg { width: 24px; height: 24px; }
-    .cert h3 { margin: 0; }
-    .cert p { margin: 4px 0 0; color: var(--muted); font: 400 13px var(--mono); }
-
-    /* ---------- about / education ---------- */
-    .about { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
-    .about .big { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.35; letter-spacing: -0.015em; margin: 0; }
-    .about .big em { color: var(--accent); }
-    .about .copy p { color: var(--muted); }
-    .portrait { width: 132px; aspect-ratio: 2 / 3; border-radius: 18px; object-fit: cover; border: 1px solid var(--line-strong); margin-bottom: 24px; }
-    .edu { display: grid; gap: 12px; }
-    .edu .card h3 { font-size: 17px; }
-    .edu .when { font: 500 12.5px var(--mono); color: var(--faint); }
-    .langs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-
-    /* ---------- notes ---------- */
-    .notes { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
-    .notes a.card { text-decoration: none; display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
-    .notes a.card h3 { font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -0.02em; }
-    .notes a.card .go { margin-top: auto; font: 500 13px var(--mono); color: var(--accent); }
-
-    /* ---------- contact ---------- */
-    .contact { padding-bottom: 40px; }
-    .contact h2 { font-size: clamp(44px, 8vw, 112px); max-width: 12ch; line-height: .98; }
-    .contact h2 em { color: var(--accent); }
-    .mail { display: inline-flex; align-items: center; gap: 12px; margin-top: 36px; font: 500 clamp(18px, 2.6vw, 30px)/1.2 var(--sans); letter-spacing: -0.02em; text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 6px; word-break: break-all; transition: color .2s, border-color .2s; }
-    .mail:hover { color: var(--accent); border-color: var(--accent); }
-    .copy-btn { font: 500 12px var(--mono); color: var(--muted); background: none; border: 1px solid var(--line-strong); border-radius: 999px; padding: 6px 12px; cursor: pointer; margin-left: 12px; vertical-align: middle; }
-    .copy-btn:hover { color: var(--text); }
-    footer { margin-top: 96px; padding: 28px 0 40px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font: 400 13px var(--mono); color: var(--faint); }
-    footer a { text-decoration: none; color: var(--muted); }
-    footer a:hover { color: var(--accent); }
-    footer nav { display: flex; gap: 18px; }
-
-    /* ---------- responsive ---------- */
-    /* pin cards only when the whole card fits on screen */
-    @media (max-height: 819px) { .project { position: relative; top: auto; } }
-    @media (max-width: 960px) {
-      .nav ul { display: none; }
-      .project { position: relative; top: auto; grid-template-columns: 1fr; min-height: 0; }
-      .p-media { order: -1; aspect-ratio: 16 / 10; border-left: 0; border-bottom: 1px solid var(--line); min-height: 0; }
-      .xp { grid-template-columns: 1fr; gap: 12px; }
-      .skills { grid-template-columns: 1fr 1fr; }
-      .about, .notes { grid-template-columns: 1fr; gap: 32px; }
+    .timeline:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 3px;
+      background-color: #e9ecef;
     }
-    @media (max-width: 640px) {
-      body { font-size: 16px; }
-      .nav { padding-left: 10px; }
-      .brand span { display: none; }
-      .stats { grid-template-columns: 1fr 1fr; }
-      .stat { padding: 22px 12px 22px 0; }
-      .stat + .stat { padding-left: 16px; }
-      .stat:nth-child(3) { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); }
-      .stat:nth-child(4) { border-top: 1px solid var(--line); }
-      .skills, .certs { grid-template-columns: 1fr; }
-      .row { grid-template-columns: 1fr; gap: 4px; }
-      .row .go { display: none; }
-      .scroll-cue { display: none; }
-      .copy-btn { margin: 14px 0 0; display: block; }
-      .axis-legend { display: none; }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 50px;
+    }
+    .timeline-icon {
+      position: absolute;
+      left: 6px;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      background-color: #0078ff;
+      color: #fff;
+      line-height: 30px;
+      z-index: 1;
+    }
+    .timeline-content h5 {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #1e1e1e;
+    }
+    .timeline-date {
+      font-size: 0.9rem;
+      color: #0078ff;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .timeline-content p {
+      color: #6c757d;
+      margin-bottom: 0;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-      .js .hero h1 .w, .fade-up { opacity: 1; filter: none; transform: none; }
-      .js .reveal { opacity: 1; transform: none; }
-      .project { transform: none !important; }
+    /* 4. Chatbot UI Refinements */
+    #chat-circle {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #0078ff, #00c6ff);
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0px 5px 20px rgba(0, 120, 255, 0.4);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      transition: all 0.3s;
+      animation: pulse-blue 2s infinite;
     }
+    
+    #chat-circle:hover {
+        transform: scale(1.1) rotate(10deg);
+        animation: none; 
+    }
+
+    @keyframes pulse-blue {
+      0% { box-shadow: 0 0 0 0 rgba(0, 120, 255, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(0, 120, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 120, 255, 0); }
+    }
+
+    .chat-box {
+      display: none;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      bottom: 110px;
+      right: 30px;
+      width: 360px;
+      max-width: 85vw;
+      height: 480px;
+      max-height: 80vh;
+      border-radius: 15px;
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .chat-box-header {
+      background: linear-gradient(135deg, #0078ff, #0056b3);
+      height: 65px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .chat-box-toggle {
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+      font-size: 24px;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+    .chat-box-toggle:hover { opacity: 1; }
+
+    .chat-logs {
+      padding: 20px;
+      flex: 1;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      background: #f4f7fa;
+    }
+
+    .chat-msg {
+      clear: both;
+      margin-bottom: 15px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cm-msg-text {
+      padding: 12px 16px;
+      color: #444;
+      max-width: 80%;
+      display: inline-block;
+      border-radius: 18px;
+      font-size: 14px;
+      line-height: 1.5;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .chat-msg.user { text-align: right; }
+    .chat-msg.user .cm-msg-text {
+      background: #0078ff;
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+    
+    .chat-msg.bot { text-align: left; }
+    .chat-msg.bot .cm-msg-text {
+      background: white;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-input {
+      background: #fff;
+      padding: 10px 15px;
+      border-top: 1px solid #eee;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    #chat-input {
+      border: none;
+      background: #f0f2f5;
+      padding: 10px 15px;
+      border-radius: 20px;
+      width: 100%;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .chat-submit {
+      color: #0078ff;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      margin-left: 10px;
+      transition: 0.2s;
+    }
+    .chat-submit:hover { transform: scale(1.1); color: #0056b3; }
+
+    .robot-label {
+        position: absolute;
+        bottom: 95px;
+        right: 25px;
+        background: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 13px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        opacity: 0;
+        transition: opacity 0.4s, transform 0.4s;
+        transform: translateY(10px);
+        pointer-events: none;
+        color: #333;
+        font-weight: 500;
+    }
+    
+    #chat-circle:hover + .robot-label {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
   </style>
-  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="bg-glow" aria-hidden="true"></div>
 
-  <header class="nav" aria-label="Primary">
-    <a class="brand" href="#top">
-      <img src="assets/img/photo2.png" alt="" width="30" height="30">
-      <span>Debashis Mishra</span>
-    </a>
-    <ul>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#notes">Notes</a></li>
-    </ul>
-    <a class="btn sm primary" href="#contact">Get in touch</a>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Portfolio</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
+          <li><a class="nav-link scrollto" href="#education">Education</a></li>
+          <li><a class="nav-link scrollto" href="#services">Skills</a></li>
+          
+          <li class="dropdown"><a href="#"><span>My Knowledge Base</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="https://mishradebashis7.github.io/engineering-notes/" target="_blank">Engineering Blog</a></li>
+              
+              <li><a href="https://1drv.ms/o/c/bea51790052d36ac/IgCsNi0FkBelIIC-IQ0AAAAAAU-q71tySMuTn8R3PaaPn_8?e=wcGLfO" target="_blank">Raw OneNote Notebook</a></li>
+            </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav></div>
   </header>
-
+  
+  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/BGimage.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="hero-title mb-4">I am Debashis Mishra</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="AI Engineer, Java Developer, Data Scientist, Researcher"></span></p>
+          
+          <div style="margin-top: 50px;">
+              <a href="#about" class="btn btn-primary btn js-scroll px-4" role="button">Know More</a>
+              
+              <a href="https://mishradebashis7.github.io/engineering-notes/" class="btn btn-outline-light btn px-4" role="button" target="_blank" style="margin-left: 10px;">Eng. Blog</a>
+              
+              <a href="https://1drv.ms/o/c/bea51790052d36ac/IgCsNi0FkBelIIC-IQ0AAAAAAU-q71tySMuTn8R3PaaPn_8?e=wcGLfO" class="btn btn-outline-light btn px-4" role="button" target="_blank" style="margin-left: 10px;">OneNote</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <main id="main">
-    <!-- ================= HERO ================= -->
-    <div class="hero wrap" id="top">
-      <div>
-        <span class="status fade-up" style="animation-delay:.05s"><span class="dot"></span>Open to AI/ML internships · Italy &amp; EU</span>
+
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="assets/img/photo2.png" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Debashis Mishra</span></p>
+                        <p><span class="title-s">Profile: </span> <span>AI Engineer & Master's Student</span></p>
+                        <p><span class="title-s">Email: </span> <span>mishradebashis727@gmail.com</span></p>
+                        <p><span class="title-s">Phone: </span> <span>+39 3508307007</span></p>
+                        <p><span class="title-s">Location: </span> <span>Venice, Italy</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Core Skills</p>
+                    <span>Java / J2EE</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #0078ff;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Python & Data Science</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #0078ff;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>AI, ML & Deep Learning</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #0078ff;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        About me
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      I am an engineer with <strong>3+ years of experience</strong> in Java development and testing, currently pursuing a Master's in Artificial Intelligence at <strong>Ca' Foscari University, Venice</strong>.
+                    </p>
+                    <p class="lead">
+                       I have worked on production-grade systems, explored machine learning research, and built impactful prototypes focused on usability and accessibility. Known for my ability to explain complex concepts simply and collaborate effectively in diverse environments.
+                    </p>
+                    <p class="lead">
+                        I am currently seeking internship opportunities to apply my software engineering experience and growing expertise in AI and data-driven development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section><section id="experience" class="sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-a">Professional Experience</h3>
+                        <p class="subtitle-a">My career journey so far</p>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card box-shadow-full">
+                        <div class="card-body">
+                            <ul class="timeline">
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-icon"><i class="bi bi-briefcase-fill"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>Analyst (Software Engineering)</h5>
+                                        <div class="timeline-date">May 2021 - Sept 2024 | DXC Technology</div>
+                                        <p>Implemented backend modules in Java/XML for US Insurance clients. Managed CI/CD pipelines using Jenkins and Git. Mentored junior engineers and documented systems for knowledge transfer.</p>
+                                    </div>
+                                </li>
 
-      <h1 id="headline">I turn <em>AI research</em> into software that ships.</h1>
+                                <li class="timeline-item">
+                                    <div class="timeline-icon"><i class="bi bi-laptop-fill"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>Research Associate & ML Intern</h5>
+                                        <div class="timeline-date">2019 | IIT Kanpur & IIT BHU</div>
+                                        <p>Worked on autonomous UAV navigation and Machine Learning pipelines for real-world applications. Built a Streamlit-powered web interface for applying supervised learning algorithms.</p>
+                                    </div>
+                                </li>
 
-      <p class="role fade-up" style="animation-delay:1.1s">
-        <span>Debashis Mishra —</span>
-        <span class="slot" id="slot" aria-hidden="true"></span>
-        <span class="sr-only">AI Engineer, Data Engineer, Java Developer</span>
-      </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <p class="lede fade-up" style="animation-delay:1.25s">
-        <strong>3+ years</strong> building production Java systems at <strong>DXC Technology</strong>, now doing a Master's in
-        <strong>AI &amp; Data Engineering</strong> at Ca' Foscari, Venice. I build end to end: the data pipeline, the model,
-        and the interface people actually use.
-      </p>
+    <section id="education" class="sect-pt4 route" style="background-color: #f5f8fd;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-a">Education</h3>
+                        <p class="subtitle-a">Academic Background</p>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card box-shadow-full">
+                        <div class="card-body">
+                            <ul class="timeline">
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>Master's in Computer Science & IT (AI)</h5>
+                                        <div class="timeline-date">2024 - Present | Università Ca' Foscari, Italy</div>
+                                        <p>Specialization in Artificial Intelligence, Machine Learning, Deep Learning, and Cloud Computing.</p>
+                                    </div>
+                                </li>
 
-      <div class="cta fade-up" style="animation-delay:1.4s">
-        <a class="btn primary" href="#projects">View projects
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10m0 0 4-4m-4 4L4 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn" id="cv-btn" href="assets/Debashis_Mishra_CV.pdf" download hidden>
-          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Download CV
-        </a>
-        <a class="btn" href="https://www.linkedin.com/in/debashis-mishra-73543b109/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3.6 5.6H1.2V14h2.4V5.6ZM2.4 1.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8ZM14.8 9.3c0-2.3-1.2-3.9-3.4-3.9-1.1 0-1.9.6-2.2 1.2V5.6H6.9V14h2.4V9.8c0-1.1.2-2.2 1.6-2.2 1.3 0 1.4 1.3 1.4 2.3V14h2.4V9.3Z"/></svg>
-          LinkedIn
-        </a>
-        <a class="btn" href="https://github.com/mishradebashis7" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 .2a8 8 0 0 0-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.6 7.6 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.8-3.6 4 .3.3.6.8.6 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 8 .2Z"/></svg>
-          GitHub
-        </a>
+                                <li class="timeline-item">
+                                    <div class="timeline-icon"><i class="bi bi-book-half"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>B.Tech in Computer Science</h5>
+                                        <div class="timeline-date">Graduated 2021 | Siksha 'O' Anusandhan University</div>
+                                        <p>Foundation in Computer Science, Algorithms, Software Development, and Engineering principles.</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-mf pt-5 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Technical Expertise
+              </h3>
+              <p class="subtitle-a">
+                My core competencies and technology stack
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-laptop"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Software Engineering</h2>
+                <p class="s-description text-center">
+                  Production-grade development using Java, Object-Oriented Design, Microservices, and RESTful APIs. Experience with XML, JSON, and complex insurance logic engines.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-cpu"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">AI & Data Science</h2>
+                <p class="s-description text-center">
+                   Expertise in Python, TensorFlow, PyTorch, and Scikit-learn. Proficient in LLMs, Prompt Engineering, Computer Vision, and building data-driven pipelines.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-gear-wide-connected"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">DevOps & Cloud</h2>
+                <p class="s-description text-center">
+                  Experience with CI/CD workflows using Jenkins, Git/GitHub, and SQL Developer. Collaborative deployment processes and Agile/Scrum methodologies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="scroll-cue" aria-hidden="true"><i></i>Scroll</div>
+    </section><section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        Send Message To Me
+                      </h5>
+                    </div>
+                    <div>
+                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-12 text-center my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                          </div>
+                          <div class="col-md-12 text-center">
+                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">
+                        Get in Touch
+                      </h5>
+                    </div>
+                    <div class="more-info">
+                      <p class="lead">
+                        I am available for freelance work and internship opportunities. Connect with me via email or LinkedIn.
+                      </p>
+                      <ul class="list-ico">
+                        <li><span class="bi bi-geo-alt"></span> Mestre, Venice, Italy</li>
+                        <li><span class="bi bi-phone"></span> +39 3508307007</li>
+                        <li><span class="bi bi-envelope"></span> mishradebashis727@gmail.com</li>
+                      </ul>
+                    </div>
+                    <div class="socials">
+                      <ul>
+                        <li><a href="https://github.com/mishradebashis7"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/debashis-mishra-000316353/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section></main><footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <strong>Debashis Mishra</strong>. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </footer><div id="chat-circle" onclick="toggleChat()">
+    <i class="bi bi-robot"></i>
+  </div>
+  <div class="robot-label">AI Assistant</div>
 
-    <!-- ================= STATS ================= -->
-    <div class="wrap">
-      <div class="stats reveal">
-        <div class="stat"><b><span data-count="3">3</span>+</b><span>years shipping production Java at DXC Technology</span></div>
-        <div class="stat"><b data-count="50">50</b><span>U.S. states covered by the insurance rules engine I worked on</span></div>
-        <div class="stat"><b data-count="2">2</b><span>Oracle OCI 2025 Professional certifications (Data Science, GenAI)</span></div>
-        <div class="stat"><b data-count="3">3</b><span>public projects with live demos or video, built in 2025–26</span></div>
-      </div>
+  <div class="chat-box" id="chat-box">
+    <div class="chat-box-header">
+      <i class="bi bi-robot" style="margin-right: 10px;"></i> Debashis AI
+      <span class="chat-box-toggle" onclick="toggleChat()"><i class="bi bi-x"></i></span>
     </div>
+    <div class="chat-logs" id="chat-logs">
+       <div class="chat-msg bot">
+           <div class="cm-msg-text">
+             <b>Beep Boop! 🤖</b> <br>
+             Hi! I am Debashis's AI Assistant. Ask me about his skills, projects, or how to contact him.
+           </div>
+       </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="handleEnter(event)">
+      <button class="chat-submit" id="chat-submit" onclick="sendMessage()"><i class="bi bi-send-fill"></i></button>
+    </div>
+  </div>
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects" aria-labelledby="projects-h">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div>
-            <div class="eyebrow">Selected work</div>
-            <h2 id="projects-h">Projects that go from <span class="serif">raw data</span> to a working product.</h2>
-          </div>
-          <p>Each one has public code, plus a live demo or a video walkthrough.</p>
-        </div>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-        <div class="stack" id="stack">
-          <!-- 3D-PVE -->
-          <article class="project" style="--i:0">
-            <div class="p-body">
-              <div class="p-meta"><span class="badge acc">EPO CodeFest 2026</span><span>Data · ML · Visualization</span></div>
-              <h3>3D-PVE <span class="serif">Patent Valuation Engine</span></h3>
-              <p>Turns raw patent records into IP intelligence. It scores each patent on three independent axes (legal, technical and market) using live EPO PATSTAT data, then renders the portfolio as an interactive 3D landscape.</p>
-              <ul>
-                <li>SQL pipeline over PATSTAT on BigQuery: applications, citations, IPC codes and legal events.</li>
-                <li>Technical influence measured as the Shannon entropy of cross-domain citations.</li>
-                <li>An ML layer adjusts the composite score for sector risk and market volatility.</li>
-                <li>Live, snapshot and mock data modes, so the demo never breaks on stage.</li>
-              </ul>
-              <div class="chips"><span class="chip">Python</span><span class="chip">BigQuery SQL</span><span class="chip">scikit-learn</span><span class="chip">Plotly</span><span class="chip">Streamlit</span></div>
-              <div class="links">
-                <a class="btn sm primary" href="https://3dpve-project.streamlit.app/" target="_blank" rel="noopener">Live demo ↗</a>
-                <a class="btn sm" href="https://github.com/mishradebashis7/3DPVE-Project" target="_blank" rel="noopener">Code ↗</a>
-                <span class="hint">demo may take ~30s to wake</span>
-              </div>
-            </div>
-            <div class="p-media" aria-hidden="true">
-              <canvas id="pve-canvas"></canvas>
-              <div class="axis-legend">
-                <span><i style="background:#7cf3c6"></i>AI &amp; Software</span>
-                <span><i style="background:#7aa2ff"></i>Biotech</span>
-                <span><i style="background:#ffd166"></i>Green energy</span>
-                <span><i style="background:#ff8fa3"></i>Semiconductors</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Helios -->
-          <article class="project" style="--i:1">
-            <div class="p-body">
-              <div class="p-meta"><span class="badge acc">Qubic Hackathon 2025</span><span>Full-stack · AI · Energy</span></div>
-              <h3>Helios Protocol <span class="serif">solar → AI compute</span></h3>
-              <p>At noon, home solar panels make far more power than a house uses, and the surplus is often wasted. Helios notices when the home battery is full and puts that surplus energy to work training AI models.</p>
-              <ul>
-                <li>FastAPI energy-logic service simulates solar input, battery state and the “duck curve”.</li>
-                <li>When the battery hits 100%, a PyTorch node starts real gradient-descent training as useful proof-of-work.</li>
-                <li>React dashboard with a time controller to scrub through a full day of energy flow.</li>
-              </ul>
-              <div class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Recharts</span><span class="chip">FastAPI</span><span class="chip">PyTorch</span><span class="chip">C++</span></div>
-              <div class="links">
-                <a class="btn sm primary" href="https://www.youtube.com/watch?v=6QTfsUfw02o" target="_blank" rel="noopener">Video demo ↗</a>
-                <a class="btn sm" href="https://github.com/mishradebashis7/Helios-Protocol-Qubic-Hackathon" target="_blank" rel="noopener">Code ↗</a>
-              </div>
-            </div>
-            <div class="p-media">
-              <img src="assets/img/projects/helios.png" alt="Helios Protocol command center showing solar input, battery at 100% and a daily energy projection chart" loading="lazy" width="1318" height="1018">
-            </div>
-          </article>
-
-          <!-- PhyloProbe -->
-          <article class="project" style="--i:2">
-            <div class="p-body">
-              <div class="p-meta"><span class="badge acc">Information Visualization</span><span>Research · Frontend</span></div>
-              <h3>PhyloProbe <span class="serif">temporal hierarchy engine</span></h3>
-              <p>Most tree diagrams only show structure. PhyloProbe also shows how each node's health changes over time, so analysts can spot decay, growth and bottlenecks in hierarchies like org charts, budgets and microservice systems.</p>
-              <ul>
-                <li>Built on two InfoVis papers: Contact Trees (Khulusi et al., 2016) and TreeVersity (Gomez et al., 2012).</li>
-                <li>A time slider scrubs 20 intervals; each node carries a 5×5 “internal DNA” matrix and sparklines.</li>
-                <li>Three ready-made datasets to explore: social network, finance budget, and microservice health.</li>
-              </ul>
-              <div class="chips"><span class="chip">JavaScript</span><span class="chip">SVG</span><span class="chip">HTML/CSS</span><span class="chip">Data visualization</span></div>
-              <div class="links">
-                <a class="btn sm primary" href="https://mishradebashis7.github.io/phyloprobe-temporal-analytics/" target="_blank" rel="noopener">Live demo ↗</a>
-                <a class="btn sm" href="https://github.com/mishradebashis7/phyloprobe-temporal-analytics" target="_blank" rel="noopener">Code ↗</a>
-              </div>
-            </div>
-            <div class="p-media">
-              <img src="assets/img/projects/phyloprobe.png" alt="PhyloProbe dashboard with a node tree, sparklines, time index T-10 and a 5 by 5 inspector matrix" loading="lazy" width="1440" height="810">
-            </div>
-          </article>
-        </div>
-
-        <div class="earlier reveal">
-          <h3>Earlier work</h3>
-          <div class="row">
-            <span class="yr">2021 · B.Tech</span>
-            <div><strong>No-code ML workbench</strong><p>A Streamlit app that lets non-programmers run supervised learning (NLP, binary classification) on tasks such as disinformation filtering and mushroom edibility.</p></div>
-            <span class="go"></span>
-          </div>
-          <div class="row">
-            <span class="yr">2019 · IIT Kanpur</span>
-            <div><strong>Autonomous UAV navigation</strong><p>Embedded control and C-based SDKs for drone navigation, as a student research associate at VTOL Aviation.</p></div>
-            <span class="go"></span>
-          </div>
-          <a class="row" href="https://github.com/mishradebashis7/ML" target="_blank" rel="noopener">
-            <span class="yr">2020 · CV</span>
-            <div><strong>Plant seedling classification</strong><p>Image classifier for seedling species with a CNN pipeline in Jupyter.</p></div>
-            <span class="go">Code →</span>
-          </a>
-          <a class="row" href="https://github.com/mishradebashis7/Object-Tracking" target="_blank" rel="noopener">
-            <span class="yr">2020 · CV</span>
-            <div><strong>Object tracking</strong><p>Computer-vision experiments in tracking objects across video frames with OpenCV.</p></div>
-            <span class="go">Code →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= EXPERIENCE ================= -->
-    <section id="experience" aria-labelledby="xp-h">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div>
-            <div class="eyebrow">Experience</div>
-            <h2 id="xp-h">Three years on <span class="serif">production</span> code.</h2>
-          </div>
-          <p>Real clients, real releases, real deadlines. I bring those habits to my AI work.</p>
-        </div>
-
-        <div class="xp reveal">
-          <div><div class="when">May 2021 — Sep 2024</div><div class="org">DXC Technology · Remote, India</div></div>
-          <div>
-            <h3>Analyst, Software Engineering</h3>
-            <ul>
-              <li>Built Java backend modules (XML, JSON, JSP) for a <b>production insurance rules engine covering all 50 U.S. states</b>.</li>
-              <li>Delivered RESTful services and data workflows for client-facing systems.</li>
-              <li>Supported CI/CD and deployments with Jenkins, WinSCP and SQL Developer; took part in sprint planning, defect triage, release reviews and test automation.</li>
-              <li><b>Mentored junior engineers</b> and wrote the system documentation used for knowledge transfer.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp reveal">
-          <div><div class="when">May — Jul 2019</div><div class="org">VTOL Aviation · IIT Kanpur</div></div>
-          <div>
-            <h3>Student Research Associate</h3>
-            <ul>
-              <li>Worked on autonomous UAV navigation with embedded control systems and C-based SDKs.</li>
-              <li>Hardware interfacing and algorithm work, versioned with Git.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp reveal">
-          <div><div class="when">May — Jul 2019</div><div class="org">EI Systems / TechNex, IIT BHU</div></div>
-          <div>
-            <h3>Machine Learning Intern</h3>
-            <ul>
-              <li>Evaluated predictive models with preprocessing and feature engineering.</li>
-              <li>Explored dimensionality reduction, pattern recognition and classifier evaluation for NLP and computer vision.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SKILLS ================= -->
-    <section id="skills" aria-labelledby="skills-h">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div>
-            <div class="eyebrow">Toolkit</div>
-            <h2 id="skills-h">What I work with.</h2>
-          </div>
-          <p>Grouped by what it's for. Everything here I've used in coursework, projects or production.</p>
-        </div>
-
-        <div class="skills">
-          <div class="card reveal">
-            <h3>AI &amp; LLMs</h3>
-            <p>Models, agents and retrieval</p>
-            <div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow / Keras</span><span class="chip">scikit-learn</span><span class="chip">Hugging Face</span><span class="chip">LangChain / LangGraph</span><span class="chip">RAG</span><span class="chip">AI agents</span><span class="chip">MCP</span><span class="chip">OpenCV</span><span class="chip">Ollama</span></div>
-          </div>
-          <div class="card reveal" style="--d:.08s">
-            <h3>Data engineering</h3>
-            <p>Pipelines, storage and search</p>
-            <div class="chips"><span class="chip">SQL</span><span class="chip">Pandas / NumPy</span><span class="chip">Apache Spark</span><span class="chip">Kafka</span><span class="chip">Airflow</span><span class="chip">Elasticsearch</span><span class="chip">Vector DBs</span><span class="chip">MLflow</span><span class="chip">ClickHouse</span></div>
-          </div>
-          <div class="card reveal" style="--d:.16s">
-            <h3>Backend</h3>
-            <p>Services that hold up in production</p>
-            <div class="chips"><span class="chip">Java</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Pydantic</span><span class="chip">REST APIs</span><span class="chip">Microservices</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span></div>
-          </div>
-          <div class="card reveal">
-            <h3>Cloud &amp; delivery</h3>
-            <p>Shipping and running it</p>
-            <div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AWS</span><span class="chip">Oracle OCI</span><span class="chip">Jenkins CI/CD</span><span class="chip">Git / GitHub</span><span class="chip">Agile / Scrum</span></div>
-          </div>
-          <div class="card reveal" style="--d:.08s">
-            <h3>Interfaces &amp; viz</h3>
-            <p>Making results usable</p>
-            <div class="chips"><span class="chip">React</span><span class="chip">Streamlit</span><span class="chip">JavaScript</span><span class="chip">SVG / D3-style viz</span><span class="chip">Plotly</span><span class="chip">Matplotlib</span></div>
-          </div>
-          <div class="card reveal" style="--d:.16s">
-            <h3>Foundations</h3>
-            <p>From the Master's programme</p>
-            <div class="chips"><span class="chip">Deep learning</span><span class="chip">Information retrieval</span><span class="chip">3D computer vision</span><span class="chip">Time series</span><span class="chip">Distributed programming</span><span class="chip">Probability &amp; statistics</span></div>
-          </div>
-        </div>
-
-        <div class="certs">
-          <div class="card cert reveal">
-            <div class="seal"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.4 1.7 2.9-.1.9 2.8 2.3 1.8-.9 2.8.9 2.8-2.3 1.8-.9 2.8-2.9-.1L12 21l-2.4-1.7-2.9.1-.9-2.8-2.3-1.8.9-2.8-.9-2.8 2.3-1.8.9-2.8 2.9.1L12 3Z" stroke="currentColor" stroke-width="1.4"/><path d="m8.5 12 2.3 2.3 4.7-4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><h3>OCI 2025 Data Science Professional</h3><p>Oracle · 1Z0-1110-25 · Oct 2025</p></div>
-          </div>
-          <div class="card cert reveal" style="--d:.08s">
-            <div class="seal"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.4 1.7 2.9-.1.9 2.8 2.3 1.8-.9 2.8.9 2.8-2.3 1.8-.9 2.8-2.9-.1L12 21l-2.4-1.7-2.9.1-.9-2.8-2.3-1.8.9-2.8-.9-2.8 2.3-1.8.9-2.8 2.9.1L12 3Z" stroke="currentColor" stroke-width="1.4"/><path d="m8.5 12 2.3 2.3 4.7-4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><h3>OCI 2025 Generative AI Professional</h3><p>Oracle · 1Z0-1127-25 · Oct 2025</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about" aria-labelledby="about-h">
-      <div class="wrap about">
-        <div class="reveal">
-          <div class="eyebrow">About</div>
-          <h2 id="about-h" class="sr-only">About me</h2>
-          <p class="big" style="margin-top:20px">I'm the engineer who <em class="serif">explains the model</em> to the people who use it. I like taking a fuzzy idea, finding the data that matters, and shipping something people can click on.</p>
-          <div class="copy">
-            <p>After three years of production Java, I moved to Venice to specialise in AI and data engineering. I'm most interested in reasoning agents, multimodal AI, and AI for sustainability. Colleagues know me for mentoring, clear documentation and bringing people together.</p>
-            <p>I'm looking for an <strong style="color:var(--text);font-weight:500">AI/ML or data engineering internship</strong> (or thesis collaboration) in Italy or the EU, where solid engineering habits matter as much as the model.</p>
-          </div>
-        </div>
-        <div class="edu reveal" style="--d:.1s">
-          <img class="portrait" src="assets/img/photo2.png" alt="Portrait of Debashis Mishra" width="196" height="294" loading="lazy">
-          <div class="card">
-            <div class="when">2024 — present</div>
-            <h3>M.Sc. Computer Science &amp; IT, AI &amp; Data Engineering</h3>
-            <p style="margin:6px 0 0;color:var(--muted);font-size:14.5px">Università Ca' Foscari, Venice</p>
-          </div>
-          <div class="card">
-            <div class="when">2017 — 2021</div>
-            <h3>B.Tech Computer Science Engineering</h3>
-            <p style="margin:6px 0 0;color:var(--muted);font-size:14.5px">Siksha 'O' Anusandhan University, India</p>
-          </div>
-          <div class="langs">
-            <span class="chip">English · professional</span><span class="chip">Hindi · native</span><span class="chip">Odia · native</span><span class="chip">Italian · learning</span><span class="chip">French · learning</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= NOTES ================= -->
-    <section id="notes" aria-labelledby="notes-h">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div>
-            <div class="eyebrow">Learning in public</div>
-            <h2 id="notes-h">I write down <span class="serif">what I learn.</span></h2>
-          </div>
-        </div>
-        <div class="notes">
-          <a class="card reveal" href="https://mishradebashis7.github.io/engineering-notes/" target="_blank" rel="noopener">
-            <span class="chip" style="align-self:flex-start">MkDocs · auto-deployed with GitHub Actions</span>
-            <h3>Engineering notes</h3>
-            <p style="margin:0;color:var(--muted)">A linked knowledge base on AI, system design and backend engineering, updated as I study.</p>
-            <span class="go">Read the notes ↗</span>
-          </a>
-          <a class="card reveal" style="--d:.08s" href="https://1drv.ms/o/c/bea51790052d36ac/IgCsNi0FkBelIIC-IQ0AAAAAAU-q71tySMuTn8R3PaaPn_8?e=wcGLfO" target="_blank" rel="noopener">
-            <span class="chip" style="align-self:flex-start">OneNote</span>
-            <h3>Raw study notebook</h3>
-            <p style="margin:0;color:var(--muted)">My unedited working notes from the Master's courses.</p>
-            <span class="go">Open notebook ↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="contact" aria-labelledby="contact-h">
-      <div class="wrap">
-        <div class="reveal">
-          <div class="eyebrow">Contact</div>
-          <h2 id="contact-h">Let's build something <em class="serif">useful.</em></h2>
-          <div>
-            <a class="mail" href="mailto:mishradebashis727@gmail.com?subject=Hello%20Debashis">mishradebashis727@gmail.com</a>
-            <button class="copy-btn" id="copy-email" type="button" data-email="mishradebashis727@gmail.com">Copy email</button>
-          </div>
-          <div class="cta" style="margin-top:28px">
-            <a class="btn primary" id="cal-btn" href="#" target="_blank" rel="noopener" hidden>Book a 20-min call ↗</a>
-            <a class="btn" href="https://www.linkedin.com/in/debashis-mishra-73543b109/" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a class="btn" href="https://github.com/mishradebashis7" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-          <p style="color:var(--muted);margin-top:28px;font-size:15px">Based in Venice, Italy (CET).</p>
-        </div>
-
-        <footer>
-          <span>© <span id="yr">2026</span> Debashis Mishra · Venice</span>
-          <nav aria-label="Footer"><a href="#top">Back to top ↑</a></nav>
-        </footer>
-      </div>
-    </section>
-  </main>
+  <script src="assets/js/main.js"></script>
 
   <script>
-  /* ====== Settings: edit these ====== */
-  // Your free booking link, e.g. "https://cal.com/your-username/20min". Leave "" to hide the button.
-  const CAL_LINK = "";
-  // Set to true after you add your CV at assets/Debashis_Mishra_CV.pdf
-  const HAS_CV = false;
-  /* ================================== */
-
-  (() => {
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // Booking button
-    if (CAL_LINK) { const b = document.getElementById('cal-btn'); b.href = CAL_LINK; b.hidden = false; }
-
-    if (HAS_CV) document.getElementById('cv-btn').hidden = false;
-
-    // Word-by-word blur-in headline
-    const h1 = document.getElementById('headline');
-    let i = 0;
-    const split = node => {
-      [...node.childNodes].forEach(n => {
-        if (n.nodeType === 3) {
-          const frag = document.createDocumentFragment();
-          n.textContent.split(/(\s+)/).forEach(part => {
-            if (!part) return;
-            if (/^\s+$/.test(part)) { frag.append(part); return; }
-            const s = document.createElement('span');
-            s.className = 'w'; s.textContent = part;
-            s.style.animationDelay = (0.15 + i++ * 0.08) + 's';
-            frag.append(s);
-          });
-          n.replaceWith(frag);
-        } else if (n.nodeType === 1) split(n);
-      });
+    const knowledgeBase = {
+        "skills": "My technical skills include Java, Python, SQL, C, Dart. For AI/ML, I use OpenCV, TensorFlow, PyTorch, Keras, and LangChain. I also have DevOps skills in Jenkins, Git, and Docker.",
+        "experience": "I have 3+ years of experience. I worked as an Analyst at DXC Technology (2021-2024) working on Java backend systems. I also interned at VTOL Aviation and El Systems/TechNex.",
+        "education": "I am currently pursuing a Master's in Computer Science & IT (AI Specialization) at Ca' Foscari University, Venice. I hold a B.Tech in CSE from Siksha 'O' Anusandhan University.",
+        "contact": "You can reach me at mishradebashis727@gmail.com or by phone at +39 3508307007. I am currently based in Mestre, Venice, Italy.",
+        "projects": "I have worked on insurance logic engines, autonomous UAV navigation, and built a Streamlit-powered web interface for ML algorithms.",
+        "location": "I am currently living in Mestre, Venice, Italy.",
+        "languages": "I speak Professional English, Native Hindi & Odia, and Beginner Italian.",
+        "interests": "I am interested in Multimodal AI, Reasoning Agents, LLM-based Systems, Quantum Computation, and Robotics."
     };
-    split(h1);
 
-    // Rotating role slot
-    const roles = ['AI Engineer', 'Data Engineer', 'ML Researcher', 'Java Developer'];
-    const slot = document.getElementById('slot');
-    const spans = roles.map((r, k) => { const s = document.createElement('span'); s.textContent = r; if (!k) s.className = 'on'; slot.append(s); return s; });
-    if (!reduce) {
-      let cur = 0;
-      setInterval(() => {
-        const prev = spans[cur]; cur = (cur + 1) % spans.length; const next = spans[cur];
-        prev.className = 'off'; next.className = '';
-        void next.offsetWidth; next.className = 'on';
-        setTimeout(() => { if (prev.className === 'off') prev.className = ''; }, 650);
-      }, 2400);
+    function toggleChat() {
+        var chatBox = document.getElementById('chat-box');
+        if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+            chatBox.style.display = 'flex';
+        } else {
+            chatBox.style.display = 'none';
+        }
     }
 
-    // Reveal on scroll + count-up
-    const countUp = el => {
-      const end = +el.dataset.count; if (reduce) { el.textContent = end; return; }
-      const t0 = performance.now(), dur = 1200;
-      const step = t => { const p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
-      requestAnimationFrame(step);
-    };
-    const io = new IntersectionObserver(entries => entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('in');
-      e.target.querySelectorAll('[data-count]').forEach(countUp);
-      io.unobserve(e.target);
-    }), { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Active nav link
-    const links = [...document.querySelectorAll('.nav ul a')];
-    const navIo = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
-    }), { rootMargin: '-45% 0px -50% 0px' });
-    links.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) navIo.observe(s); });
-
-    // Sticky stacking cards: scale down + dim as the next card covers them
-    const cards = [...document.querySelectorAll('.project')];
-    const desktop = matchMedia('(min-width: 961px) and (min-height: 820px)');
-    let ticking = false;
-    const stackFx = () => {
-      ticking = false;
-      if (reduce || !desktop.matches) { cards.forEach(c => { c.style.transform = ''; c.style.filter = ''; }); return; }
-      cards.forEach((c, k) => {
-        const next = cards[k + 1]; if (!next) return;
-        const a = c.getBoundingClientRect(), b = next.getBoundingClientRect();
-        const p = Math.min(1, Math.max(0, (a.bottom - b.top) / a.height));
-        c.style.transform = `scale(${1 - p * 0.05})`;
-        c.style.filter = `brightness(${1 - p * 0.35})`;
-      });
-    };
-    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(stackFx); } }, { passive: true });
-    addEventListener('resize', stackFx);
-
-    // Copy email
-    const cb = document.getElementById('copy-email');
-    cb.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(cb.dataset.email); cb.textContent = 'Copied ✓'; }
-      catch { cb.textContent = 'Select & copy'; }
-      setTimeout(() => cb.textContent = 'Copy email', 1800);
-    });
-
-    // 3D-PVE: rotating 3D point cloud (Legal × Technical × Market), decorative
-    const cv = document.getElementById('pve-canvas');
-    const ctx = cv.getContext('2d');
-    const colors = ['#7cf3c6', '#7aa2ff', '#ffd166', '#ff8fa3'];
-    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
-    const centers = [[.55, .7, .6], [-.5, .3, -.4], [.2, -.55, -.5], [-.35, -.3, .55]];
-    const pts = [];
-    centers.forEach((c, ci) => { for (let n = 0; n < 60; n++) {
-      const g = () => (rnd() + rnd() + rnd() - 1.5) * 0.45;
-      pts.push({ x: c[0] + g(), y: c[1] + g(), z: c[2] + g(), c: colors[ci], r: 1.4 + rnd() * 2.6 });
-    }});
-    let W = 0, H = 0, angle = 0.6, visible = false;
-    const size = () => {
-      const r = cv.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
-      W = r.width; H = r.height; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0); draw();
-    };
-    const proj = (x, y, z) => {
-      const ca = Math.cos(angle), sa = Math.sin(angle), tilt = 0.42, ct = Math.cos(tilt), st = Math.sin(tilt);
-      const rx = x * ca - z * sa, rz = x * sa + z * ca;
-      const ry = y * ct - rz * st, rz2 = y * st + rz * ct;
-      const small = W < 600, s = Math.min(W, H) * (small ? 0.3 : 0.34), f = 3 / (3 + rz2);
-      return [W / 2 + rx * s * f, H * (small ? 0.5 : 0.48) - ry * s * f, rz2, f];
-    };
-    function draw() {
-      if (!W) return;
-      ctx.clearRect(0, 0, W, H);
-      // axes
-      const axes = [[[-1,-1,-1],[1,-1,-1],'Legal'],[[-1,-1,-1],[-1,1,-1],'Technical'],[[-1,-1,-1],[-1,-1,1],'Market']];
-      ctx.lineWidth = 1; ctx.font = '500 11px "JetBrains Mono", monospace';
-      // cube wireframe
-      ctx.strokeStyle = 'rgba(255,255,255,0.07)';
-      const v = [-1, 1];
-      v.forEach(a => v.forEach(b => {
-        [[[-1,a,b],[1,a,b]],[[a,-1,b],[a,1,b]],[[a,b,-1],[a,b,1]]].forEach(([p, q]) => {
-          const P = proj(...p), Q = proj(...q); ctx.beginPath(); ctx.moveTo(P[0], P[1]); ctx.lineTo(Q[0], Q[1]); ctx.stroke();
-        });
-      }));
-      axes.forEach(([p, q, label]) => {
-        const P = proj(...p), Q = proj(...q);
-        ctx.strokeStyle = 'rgba(255,255,255,0.32)'; ctx.beginPath(); ctx.moveTo(P[0], P[1]); ctx.lineTo(Q[0], Q[1]); ctx.stroke();
-        ctx.fillStyle = 'rgba(236,238,242,0.7)'; ctx.fillText(label, Q[0] + 6, Q[1] - 6);
-      });
-      pts.map(p => ({ p, q: proj(p.x, p.y, p.z) })).sort((a, b) => b.q[2] - a.q[2]).forEach(({ p, q }) => {
-        ctx.globalAlpha = 0.35 + 0.65 * Math.min(1, (q[3] - 0.6) / 0.6);
-        ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(q[0], q[1], p.r * q[3], 0, Math.PI * 2); ctx.fill();
-      });
-      ctx.globalAlpha = 1;
+    function handleEnter(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
     }
-    const loop = () => { if (!visible) return; angle += 0.0035; draw(); requestAnimationFrame(loop); };
-    new IntersectionObserver(([e]) => { const was = visible; visible = e.isIntersecting && !reduce; if (visible && !was) loop(); }).observe(cv);
-    new ResizeObserver(size).observe(cv);
-    if (document.fonts) document.fonts.ready.then(draw);
-  })();
+
+    function sendMessage() {
+        var inputVal = document.getElementById('chat-input').value;
+        if (inputVal.trim() === '') return;
+        addMessage(inputVal, 'user');
+        document.getElementById('chat-input').value = '';
+        
+        setTimeout(function() {
+            var response = getBotResponse(inputVal.toLowerCase());
+            addMessage(response, 'bot');
+        }, 600);
+    }
+
+    function addMessage(msg, type) {
+        var logs = document.getElementById('chat-logs');
+        var msgDiv = document.createElement('div');
+        msgDiv.className = 'chat-msg ' + type;
+        var textDiv = document.createElement('div');
+        textDiv.className = 'cm-msg-text';
+        textDiv.innerHTML = msg;
+        msgDiv.appendChild(textDiv);
+        logs.appendChild(msgDiv);
+        logs.scrollTop = logs.scrollHeight;
+    }
+
+    function getBotResponse(input) {
+        if (input.includes("skill") || input.includes("tech") || input.includes("java") || input.includes("python")) {
+            return knowledgeBase.skills;
+        } else if (input.includes("work") || input.includes("job") || input.includes("experience") || input.includes("dxc")) {
+            return knowledgeBase.experience;
+        } else if (input.includes("study") || input.includes("education") || input.includes("degree") || input.includes("university") || input.includes("master")) {
+            return knowledgeBase.education;
+        } else if (input.includes("contact") || input.includes("email") || input.includes("phone") || input.includes("reach")) {
+            return knowledgeBase.contact;
+        } else if (input.includes("project")) {
+            return knowledgeBase.projects;
+        } else if (input.includes("live") || input.includes("location") || input.includes("where")) {
+            return knowledgeBase.location;
+        } else if (input.includes("language")) {
+            return knowledgeBase.languages;
+        } else if (input.includes("interest") || input.includes("hobby")) {
+            return knowledgeBase.interests;
+        } else if (input.includes("hello") || input.includes("hi")) {
+            return "Beep Boop! 🤖 Hello! I am ready to answer questions about Debashis.";
+        } else {
+            return "My circuits are confused! 🤖 This is out of scope for my current knowledge base. Please ask about my skills, experience, projects, or contact info.";
+        }
+    }
   </script>
+
 </body>
 </html>
