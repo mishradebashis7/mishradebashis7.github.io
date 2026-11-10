@@ -1,42 +1,37 @@
-# 👨‍💻 Debashis Mishra - Portfolio & Engineering Notes
+# Debashis Mishra: Portfolio
 
-![Profile Views](https://komarev.com/ghpvc/?username=mishradebashis7&color=blue&style=flat-square)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/debashis-mishra-000316353/)
-[![Website](https://img.shields.io/badge/Website-Live_Demo-green?style=flat-square&logo=google-chrome)](https://mishradebashis7.github.io/mishradebashis7.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/debashis-mishra-73543b109/)
+[![Website](https://img.shields.io/badge/Website-Live-green?style=flat-square&logo=google-chrome)](https://mishradebashis7.github.io/)
 
-## 🚀 About The Project
-This repository hosts my personal professional portfolio and my "Digital Garden" of engineering notes. 
+My personal portfolio: AI engineer with 3+ years of production Java, now doing a Master's in AI & Data Engineering at Ca' Foscari, Venice.
 
-It serves two purposes:
-1.  **Portfolio:** A responsive static site showcasing my experience in AI, Java Development, and Research.
-2.  **Engineering Notes:** A linked knowledge base (built with MkDocs) where I document my daily learning in AI, System Design, and Backend Engineering.
+**Live site:** https://mishradebashis7.github.io/
 
-## 🛠️ Tech Stack
-* **Frontend:** HTML5, CSS3, JavaScript (Bootstrap Framework)
-* **Documentation:** Markdown & MkDocs (Material Theme)
-* **Hosting:** GitHub Pages
-* **Automation:** GitHub Actions (for building the notes site)
+## Tech stack
+Free and open source only. There's no framework, no build step and no paid service.
 
-## 📂 Project Structure
+- A single `index.html` with inline CSS and vanilla JavaScript
+- Fonts: Instrument Serif, Inter Tight and JetBrains Mono (SIL Open Font License, via Google Fonts)
+- Hosted on GitHub Pages
+- Respects `prefers-reduced-motion`, has keyboard focus states, and the content stays readable without JavaScript
+
+## Structure
 ```text
 /
-├── index.html          # Main Portfolio Entry Point
-├── assets/             # CSS, JS, Images for the portfolio
-├── docs/               # Markdown files for Engineering Notes
-└── mkdocs.yml          # Configuration for the Notes site
+├── index.html                 # The whole portfolio
+├── assets/img/                # Portrait, favicon, project screenshots
+│   └── projects/
+└── my-engineering-notes/      # MkDocs source for the engineering notes site
+```
 
-I use this repository to practice "Learning in Public."
+## Settings
+Near the top of the `<script>` block in `index.html`:
 
-    Every day, I write a new concept I learned in the docs/ folder.
+- `CAL_LINK`: paste a free booking link (e.g. `https://cal.com/<username>/20min`) to show a "Book a call" button.
+- `HAS_CV`: put a PDF at `assets/Debashis_Mishra_CV.pdf` and set this to `true` to show "Download CV".
 
-    I commit the change using VS Code.
+## Engineering notes
+I practise learning in public. Notes live at https://mishradebashis7.github.io/engineering-notes/.
 
-    This automatically updates my Notes website and keeps my GitHub contribution graph active 🟩.
-
-📬 Contact
-
-Debashis Mishra AI Engineer | Java Developer
-
-📍 Venice, Italy
-
-📧 mishradebashis727@gmail.com
+## Contact
+Debashis Mishra · Venice, Italy · mishradebashis727@gmail.com
